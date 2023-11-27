@@ -99,12 +99,10 @@ namespace NurburgringRecordsParser
 
         void SaveFilesToGoogleDrive()
         {
-            var t1 = _mainFile?.SaveToDrive();
-            var t2 = _xslMainFile?.SaveToDrive();
-            var t3 = _filteredFile?.SaveToDrive();
-            var t4 = _htmlFile?.SaveToDrive();
-
-            Task.WaitAll(t1, t2, t3, t4);
+            _mainFile?.SaveToDrive();
+            _xslMainFile?.SaveToDrive();
+            _filteredFile?.SaveToDrive();
+            _htmlFile?.SaveToDrive();
         }
 
         void TransformToHtml()
