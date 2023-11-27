@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NurburgringRecordsParser.MainPage">
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="Select a file" Clicked="OnSelectFileClicked"/>
+        </MenuBarItem>
+        <MenuBarItem Text="Google Drive">
+            <MenuFlyoutItem Text="Save files" Clicked="OnSaveFilesToGoogleDriveClicked"/>
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+    <VerticalStackLayout Margin="10, 20, 0, 0">
+        <HorizontalStackLayout>
+            <VerticalStackLayout
+        Spacing="10"
+        Padding="30,0"
+        VerticalOptions="Start">
+
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="CategoryCheck" />
+                    <Label Text="Category" VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="TimeCheck" />
+                    <Label Text="Time" VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="ManufacturerCheck" />
+                    <Label Text="Manufacturer" VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="DriverCheck" />
+                    <Label Text="Driver" VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <CheckBox x:Name="YearCheck" />
+                    <Label Text="Year" VerticalOptions="Center" />
+
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="20">
+                    <RadioButton x:Name="SAXRadioButton" Content="SAX"/>
+                    <RadioButton x:Name="DOMRadioButton" Content="DOM"/>
+                    <RadioButton x:Name="LINQRadioButton" Content="LINQ"/>
+                    <Button Text="Search" BackgroundColor="Black" TextColor="White" Clicked="OnSearchButtonClicked"/>
+                    <Button Text="Clear filters" BackgroundColor="Black" TextColor="White" Clicked="OnClearFiltersButtonClicked"/>
+                    <Button Text="Transform to HTML" BackgroundColor="Black" TextColor="White" Clicked="OnTransformButtonClicked"/>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+        Spacing="10"
+        Padding="30,0"
+        VerticalOptions="Start">
+                <Picker x:Name="CategoryPicker" Margin="20, 0, 0, 0">
+                    <Picker.Triggers>
+                        <DataTrigger TargetType="Picker"
+                                 Binding="{Binding Source={x:Reference CategoryCheck}, Path=IsChecked}"
+                                 Value="True">
+                            <Setter Property="IsEnabled" Value="True"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Picker"
+                                 Binding="{Binding Source={x:Reference CategoryCheck}, Path=IsChecked}"
+                                 Value="False">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Picker.Triggers>
+                </Picker>
+
+                <Picker x:Name="TimePicker" Margin="20, 0, 0, 0">
+                    <Picker.Triggers>
+                        <DataTrigger TargetType="Picker"
+                     Binding="{Binding Source={x:Reference TimeCheck}, Path=IsChecked}"
+                     Value="True">
+                            <Setter Property="IsEnabled" Value="True"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Picker"
+                     Binding="{Binding Source={x:Reference TimeCheck}, Path=IsChecked}"
+                     Value="False">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Picker.Triggers>
+                </Picker>
+
+                <Picker x:Name="ManufacturerPicker" Margin="20, 0, 0, 0">
+                    <Picker.Triggers>
+                        <DataTrigger TargetType="Picker"
+                     Binding="{Binding Source={x:Reference ManufacturerCheck}, Path=IsChecked}"
+                     Value="True">
+                            <Setter Property="IsEnabled" Value="True"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Picker"
+                     Binding="{Binding Source={x:Reference ManufacturerCheck}, Path=IsChecked}"
+                     Value="False">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Picker.Triggers>
+                </Picker>
+
+                <Picker x:Name="DriverPicker" Margin="20, 0, 0, 0">
+                    <Picker.Triggers>
+                        <DataTrigger TargetType="Picker"
+                     Binding="{Binding Source={x:Reference DriverCheck}, Path=IsChecked}"
+                     Value="True">
+                            <Setter Property="IsEnabled" Value="True"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Picker"
+                     Binding="{Binding Source={x:Reference DriverCheck}, Path=IsChecked}"
+                     Value="False">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Picker.Triggers>
+                </Picker>
+
+                <Picker x:Name="YearPicker" Margin="20, 0, 0, 0">
+                    <Picker.Triggers>
+                        <DataTrigger TargetType="Picker"
+                     Binding="{Binding Source={x:Reference YearCheck}, Path=IsChecked}"
+                     Value="True">
+                            <Setter Property="IsEnabled" Value="True"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Picker"
+                     Binding="{Binding Source={x:Reference YearCheck}, Path=IsChecked}"
+                     Value="False">
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Picker.Triggers>
+                </Picker>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout>
+                <Editor x:Name="TextBox"
+                        HeightRequest="500"
+                        WidthRequest="300"
+                        IsReadOnly="True"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>

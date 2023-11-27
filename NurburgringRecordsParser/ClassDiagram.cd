@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NurburgringRecordsParser.MainPage">
+    <Position X="5.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAQEAAgBBBAQBQEAAIAIAABCISAAEIBAgAgAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NurburgringRecordsParser.Parsers.DOMSearch">
+    <Position X="13.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Parsers\DOMSearch.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.169" />
+  </Class>
+  <Class Name="NurburgringRecordsParser.Parsers.LINQSearch">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Parsers\LINQSearch.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NurburgringRecordsParser.Parsers.SAXSearch">
+    <Position X="17.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Parsers\SAXSearch.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NurburgringRecordsParser.Models.Record">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAgAABAAgAAAAACQg=</HashCode>
+      <FileName>Models\Record.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NurburgringRecordsParser.Logging.Logger">
+    <Position X="19.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAIAAAAAAAAAAAAAAAIAABAAAAAAAAAQAAEAAAAA=</HashCode>
+      <FileName>Logging\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NurburgringRecordsParser.Helpers.TrackTimeHelper">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\TrackTimeHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NurburgringRecordsParser.GoogleDrive.API">
+    <Position X="14.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAEAAAAAAAAAAAQAAAAAAAABAAAAAAAAAAAAABAAgA=</HashCode>
+      <FileName>GoogleDrive\API.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NurburgringRecordsParser.FileManager.FileFactory">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileManager\FileFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NurburgringRecordsParser.FileManager.FileHtml">
+    <Position X="11.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIKCoAAAAAAAAAAAAAAAACAAAAQAAAAAABAAABAAAA=</HashCode>
+      <FileName>FileManager\FileHtml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="NurburgringRecordsParser.FileManager.FileXML">
+    <Position X="9" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIICoAAAAAAAAAAAAAAAACAAAAQAAACAABAAABAAAA=</HashCode>
+      <FileName>FileManager\FileXML.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.19" />
+  </Class>
+  <Interface Name="NurburgringRecordsParser.Interfaces.ISearch" Collapsed="true">
+    <Position X="15.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Interfaces\ISearch.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="NurburgringRecordsParser.FileManager.IFile">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIICoAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAABAAAA=</HashCode>
+      <FileName>FileManager\IFile.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="NurburgringRecordsParser.FileManager.FileTypes">
+    <Position X="16" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAEAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileManager\FileFactory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
